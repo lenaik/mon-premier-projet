@@ -61,7 +61,7 @@ class Router {
 
           elseif (($_GET['action'] == 'administration')) {
               if (isset($_SESSION['utilisateur'])) {
-                  displayDashboard();
+                displayDashboard();
               } else {
                   echo "Mot de passe incorrect";
               }

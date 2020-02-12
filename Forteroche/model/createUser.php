@@ -19,7 +19,7 @@
 
     $q = $db->prepare("INSERT INTO membre(user,email,password) VALUES(:user,:email,:password)");
     $q->execute([
-    	'user'=>'Forteroche',
+    	'user'=>'Breezango',
     	'email'=> 'Forteroche@sfr.com',
     	'password'=>'azer',
     ]);

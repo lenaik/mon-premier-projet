@@ -22,12 +22,11 @@
         $id = $donnees['id'];
     ?>
       <li class="feature">
-        <a href="index.php?action=editer-chapitre&id="><?= htmlspecialchars($donnees['title']); ?></a>
+        <a href="index.php?action=editer-chapitre&id=<?= $id ?>"><?= htmlspecialchars($donnees['title']); ?></a>
         <i class="fas fa-edit"></i>
       </li>
     <?php
       }
-      var_dump($donnees);
       $req->closeCursor();
     ?>
   </ul>

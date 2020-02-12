@@ -8,6 +8,7 @@
    <h1 class="title-page">Espace d'administration</h1>
    <h2 class="subtitle-page">Veuillez vous connecter pour accéder à votre espace d'administration.</h2>
 
+<h3 class="subtitle-page">Si vous n'êtes l'administrateur du site, veuillez quitter cette page. MERCI</h3>
   <form class="login-form" action="http://localhost/Forteroche/view/backend/dashBoard.php" method="post">
     <div class="login-form-top">
       <div class="form-field">

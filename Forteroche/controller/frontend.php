@@ -15,6 +15,9 @@ function displayChapters() {
   require('view/frontend/chaptersView.php');
 }
 
+function displayContact() {
+  require('view/frontend/contactView.php');
+}
 
 function chapter() {
   $postManager = new ChapterManager();

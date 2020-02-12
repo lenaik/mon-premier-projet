@@ -1,13 +1,11 @@
-
 <?php
-
 
 require_once("Manager.php");
 class ChapterManager extends Manager {
 
   public function getChapters() {
     $db = $this->dbConnect();
-    $req = $db->query('SELECT `id`, `title`, `content`, `created_date` FROM chapters ORDER BY id ');
+    $req = $db->query('SELECT `id`, `title`, `content`, `created_date` FROM chapters ORDER BY created_date DESC');
   
     return $req;
   }
@@ -27,7 +25,7 @@ class ChapterManager extends Manager {
     $delete = $db->prepare('DELETE FROM chapters WHERE id = ?');
     $delete->execute(array($idChapter));
 
-    header('Location: supprimer-chapitre');
+    header('Location: http://localhost/Forteroche/view/backend/delete.php');
   }
   
   public function editChapter($idChapter, $title, $content) {

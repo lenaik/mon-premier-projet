@@ -25,21 +25,21 @@ class CommentManager extends Manager {
     $db = $this->dbConnect();
     $delete = $db->prepare('DELETE FROM comments WHERE id = ?');
     $delete->execute(array($commentId));
-    header('Location:http://localhost/Forteroche/view/backend/moderateView.php ');
+    header('Location:http://localhost/Forteroche/index.php?action=moderation');
   }
 
   public function SignalComment($commentId) {
     $db = $this->dbConnect();
     $signal = $db->prepare('UPDATE comments SET signaled = 1  WHERE id = ? ');
     $signal->execute(array($commentId));
-    header('Location:http://localhost/Forteroche/view/backend/moderateView.php');
+    header('Location:index.php');
   }
 
   public function unSignalComment($commentId) {
     $db = $this->dbConnect();
     $unsignal = $db->prepare('UPDATE comments SET signaled = 0  WHERE id = ? ');
     $unsignal->execute(array($commentId));
-    header('Location: http://localhost/Forteroche/view/backend/moderateView.php');
+    header('Location:http://localhost/Forteroche/view/backend/moderateView.php');
   }
   
   public function postComment($idChapter, $author, $comment) {

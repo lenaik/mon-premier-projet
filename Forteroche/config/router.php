@@ -17,6 +17,10 @@ class Router {
               displayContact();
           }
 
+          elseif ($_GET['action'] == 'rappel') {
+              displayRappel();
+          }
+
           elseif ($_GET['action'] == 'chapitre') {
               if (isset($_GET['id']) && $_GET['id'] > 0) {
                   chapter();

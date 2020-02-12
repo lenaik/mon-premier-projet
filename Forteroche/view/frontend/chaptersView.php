@@ -1,37 +1,30 @@
-<?php $title = " Un billet Pour l'Alaska - Le roman de Jean Forteroche" ?>
-<?php $header = "header" ?>
-<?php $headerTop = "header-top" ?>
 <?php ob_start(); ?>
+<h1 class="title-chapters">Tous les chapitres:</h1>
+<div class="content">    
 
-
-<section class="container-big">
-  <h1 class='title-page'>Retrouvez tous les chapitres</h1>
+  <div class="row">
     
-  <div class="wrapper-chapters">
-    <div class="content-chapters-left">
-      <ul class="list-chapter">
-        <?php       
-          while ($data = $req->fetch())
+    <div class="">
+<?php       
+          while ($donnees = $req->fetch())
           {
-            $id = $data['id'];
-        ?>         
-          <li class="chapters" id="chapter<?= $id ?>"><a href="index.php?action=chapitre&id=<?= $id ?>"><?= $data['title']; ?></a></li>
-          <li class="chapters" id="chapter<?= $id ?>"><?= $data['content']; ?></a></li>
-          <em><a href="index.php?action=comment<?= $id ?>">Commentaires</a></em>
-        <?php
+            $id = $donnees['id'];
+        ?>      
+      <h3 class="title"><a href="index.php?action=chapitre&id=<?= $id ?>"><?= $donnees['title']; ?></a></h3>
+        
+      <p class="info"><em>Roman</em> | <em><i class="far fa-clock"></i><?= $donnees['created_date']; ?> </em></p>
+      <div class="item"><p style="text-align: justify;"><?= substr(html_entity_decode($donnees['content']), 0,200); ?>......</p></div>  
+       <?php
           }
         ?>
-      </ul>
-
-
-
     </div>
-
+    
   </div>
-</section>
 
+       
+</div>      
 
 <?php $content = ob_get_clean(); ?>
-<?php require('view/frontend/template.php'); ?>
+<?php require('template.php'); ?>
 
 

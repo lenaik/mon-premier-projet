@@ -31,16 +31,24 @@
 <script type="text/javascript" src="https://cdn.tiny.cloud/1/3y0o4z3btq0eswxcaiemnc9mp1rnzmew17ps4dg475gvkdzf/tinymce/5/tinymce.min.js"></script>
 <script>
   tinymce.init({
+    themes: "advanced",
     selector: 'textarea',
     height: 500,
     width: '100%',
     menubar: false,
+    forced_root_block : false,
+    force_br_newlines : false,
+    force_p_newlines : false,
     plugins: [
       'advlist autolink link lists image charmap print preview anchor textcolor ',
       'searchreplace visualblocks code fullscreen',
-      'insertdatetime media table contextmenu paste code help'
+       "contextmenu textcolor paste fullpage textcolor",
+      'insertdatetime media table contextmenu paste code help',
+     
+
     ],
-    toolbar: ' insert | undo redo | styleselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help '
+    toolbar: ' insert | undo redo | styleselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+    entity_encoding : "raw",
   });
 </script>
 <script>

@@ -1,4 +1,3 @@
-
 <?php $title = " Jean Forteroche - Modération commentaire" ?>
 <?php $header = "header-backend" ?>
 <?php $headerTop = "header-top" ?>

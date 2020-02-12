@@ -7,7 +7,6 @@ require_once('model/ChapterManager.php');
 function loggin($user, $password) {
   $adminManager = new AdminManager();
   $dataUser = $adminManager->loggin($user, $password);
-  var_dump($dataUser);
   if ($dataUser === false) {
     throw new Exception('Connexion impossible !');
   }
@@ -23,6 +22,10 @@ function displayDashboard() {
 
 function displayLogin() {
   require('view/backend/loginView.php');
+}
+
+function displayRappel() {
+  require('view/backend/reminder.php');
 }
 
 function displayCreate() {

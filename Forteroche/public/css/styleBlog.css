@@ -35,8 +35,16 @@ a:hover, a:focus {
     color: #404852;
     text-decoration: none;
 }
+
+.containerCom{
+    margin-top: 75px;
+}
+
 .form-group{
-    margin-top:150%;
+   display:flex;
+   flex-direction:column;
+   width: 80%;
+   transform: translate(97px,11px);
 }
 /*------------- Header -----------------*/
 
@@ -203,12 +211,15 @@ h1.title {
 }
 
 .item {
-    text-align: justify;
-   
+    text-align: justify;  
 }
 
 .title-chapter{
-    transform: translate(322px,0px);
+    transform: translate(209px,0px);
+}
+
+.title-chapters{
+    transform: translate(167px,31px);
 }
 
 .content{
@@ -269,6 +280,11 @@ p.fil {
 
 .author-name {
     font-weight: 600;
+}
+
+fieldset{
+ margin-top: 20px;
+
 }
 
 .paginate {
@@ -523,15 +539,16 @@ tr>td a {
 .sign img {
     width: 41%;
     height: 280px;
-    transform: translate(-250px, 20px);  
+    transform: translate(-282px, 20px);  
 }
 
 .title-bio{
-transform: translate(50px, -20px);
+transform: translate(-45px, -20px);
+
 }
 
 .paraBio{
-  transform: translate(112px, -265px);
+  transform: translate(64px, -265px);
 
 }
 .essai{

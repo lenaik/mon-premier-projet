@@ -33,7 +33,7 @@
   <div class="container">   
     <div class="burger"></div>
       <div class="navbar-header">
-            <a class="navbar-brand" href="index.php">Blog Jean Forteroche</a>
+            <a class="navbar-brand" href="index.php?action=accueil">Blog Jean Forteroche</a>
       </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">

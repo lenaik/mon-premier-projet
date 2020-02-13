@@ -9,7 +9,7 @@
    <h2 class="subtitle-page">Veuillez vous connecter pour accéder à votre espace d'administration.</h2>
 
 <h3 class="subtitle-page">Si vous n'êtes l'administrateur du site, veuillez quitter cette page. MERCI</h3>
-  <form class="login-form" action="index.php?action=administration" method="post">
+  <form class="login-form" action="index.php?action=login" method="post">
     <div class="login-form-top">
       <div class="form-field">
           <input type="text" id="user" class="input-text" name="user" placeholder="Nom d'utilisateur" required/>
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="form-field">
-      <input class="submit-btn" type="submit" value="Envoyer">
+      <input class="submit-btn" type="submit" name ="formsend" id="formsend"value="Envoyer">
     </div>
   </form>
 </section>

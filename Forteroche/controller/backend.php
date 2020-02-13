@@ -4,15 +4,15 @@ require_once('model/AdminManager.php');
 require_once('model/ChapterManager.php');
 
 
-function loggin($user, $password) {
+function login($user, $password) {
   $adminManager = new AdminManager();
-  $dataUser = $adminManager->loggin($user, $password);
+  $dataUser = $adminManager->login($user);
   if ($dataUser === false) {
     throw new Exception('Connexion impossible !');
   }
   else {
     $_SESSION['utilisateur'] =  $dataUser['id'];
-    header('Location: http://localhost/Forteroche/view/backend/dashBoard.php');
+    header('Location:index.php?action=administration');
   }
 }
 

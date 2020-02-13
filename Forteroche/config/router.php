@@ -63,14 +63,20 @@ class Router {
               if (isset($_SESSION['utilisateur'])) {
                 displayDashboard();
               } else {
-                  echo "Mot de passe incorrect";
+                  echo "Mot de passe ou Nom d'utilisateur Incorrect. Veuillez retaper correctement votre nom d'utilisateur ou votre mot de passe. Pour tout probleme rencontre, veuillez contacter : Anjou Web Creation au 06/06/07/04/05.";
               }
           }
+          
+          elseif(($_GET['action'] == 'login')){
+               login($_POST['user'], $_POST['password']);
+          }
+
+
 
           elseif (($_GET['action'] == 'deconnexion')) {
               if (isset($_SESSION['connected'])) {
                   session_destroy();
-                  header('Location:http://localhost/Forteroche/index.php');
+                  header('Location:index.php?action=accueil');
               }
           }
 
@@ -136,9 +142,7 @@ class Router {
               displayModerate();
           }
 
-          elseif (($_GET['action'] == 'messagerie')) {
-              displayMessages();
-          }
+          
 
           elseif ($_GET['action'] == 'supprimer-commentaire') {
               if (isset($_GET['id']) && $_GET['id'] > 0) {

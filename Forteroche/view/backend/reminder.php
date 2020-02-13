@@ -5,6 +5,12 @@
     <title>Maintenance</title>
   </head>
   <body>
+    <a href="index.php?action=administration">
+    <div class="goback">
+      <i class="far fa-arrow-alt-circle-left"></i>
+      <span class="goback-text">Retour</span>
+    </div>
+  </a>
  <h1>Code :</h1>
  <p>Nom de l'utilisateur : Breezango</p>
  <p>Mot de passe : azer</p>

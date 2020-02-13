@@ -25,7 +25,7 @@ class ChapterManager extends Manager {
     $delete = $db->prepare('DELETE FROM chapters WHERE id = ?');
     $delete->execute(array($idChapter));
 
-    header('Location: http://localhost/Forteroche/view/backend/delete.php');
+    header('Location:index.php?action=supprimer-commentaire');
   }
   
   public function editChapter($idChapter, $title, $content) {
@@ -34,7 +34,7 @@ class ChapterManager extends Manager {
     $editChapter = $db->prepare('UPDATE chapters SET title = ? , content = ? WHERE id = ? ');
     $editChapter->execute(array($title, $content, $idChapter));
 
-    header('Location: http://localhost/Forteroche/view/backend/dashBoard.php');    
+    header('Location: index.php?action=administration');    
   }
   public function addChapter($title, $content) {
     
@@ -42,6 +42,6 @@ class ChapterManager extends Manager {
     $addChapter = $db->prepare('INSERT INTO chapters( title, content, created_date) VALUES(?, ?, NOW())');
     $addChapter->execute(array($title, $content));
 
-    header('Location: http://localhost/Forteroche/view/backend/dashBoard.php');    
+    header('Location: index.php?action=administration');    
   }
 }

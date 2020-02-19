@@ -21,8 +21,8 @@
 
       <div class="intro">
         <div class="container">
-          <h1>Bienvenue sur le blog de Jean Forteroche</h1>
-          <p>L'écrivain indien qui vient du Canada.</p>
+          <h1><?= $title ?></h1>
+         
         </div>
       </div>
 
@@ -75,6 +75,54 @@
     crossorigin="anonymous"
   ></script>
   <script>
+$(function() {
+    var i = 0;
+    slideCount = 5;
+    function timeout() {
+      setTimeout(function() {
+        // Move $("#quote" + i) off to the left
+        $("#quote" + i).animate({
+          right: "120%"
+        }, 2000);
+        // Change selected quote
+        i++;
+        if(i > (slideCount - 1)) {
+          i = 0;
+        }
+        // Move $("#quote" + i) to right side then back to middle
+        $("#quote" + i).css("right", "-60%");
+        $("#quote" + i).animate({
+          right: "20%"
+        }, 1500);
+        timeout();
+      }, 3500);
+    };
+    timeout();
+  });
+
+  $('.resume').hide();
+  $('.resume:lt(1)').show();
+
+  let chapters = $('.chapters');
+  for (i=0; i<chapters.length; i++) {
+    if (i % 2 == 0 ) {
+      chapters[i].style.backgroundColor = "#4a4c52"
+    } else {
+      chapters[i].style.backgroundColor = "#dbdfe7"
+    }
+  }
+
+  $('.chapters').click(function(){
+    var id = $(this).attr('id');
+    var all_resume = $('.resume');
+    for (i=0;i<all_resume.length;i++){
+      if (all_resume[i].classList.contains(id)){
+        all_resume[i].style.display = 'flex';
+      } else {
+        all_resume[i].style.display = 'none';
+      }
+    } 
+  });
 
 </script>
   </body>

@@ -1,6 +1,7 @@
+<?php $title = "Sur cette page, vous pouvez lire votre chapitre et laisser des commentaires." ?>
+
 
 <?php ob_start(); ?>
-
 <section class="template-big">
 
   <a href="index.php?action=chapitres">
@@ -22,18 +23,22 @@
 
  <br/>
  <br/>
+
+
 <h2 class="subtitle-page">Commentaires</h2>
 
 <?php
 while ($comment = $comments->fetch())  
 {
+  var_dump($comment['id']);
 ?>
 
-    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date_fr'] ?></p>
+    <p><strong><?= htmlspecialchars($comment['author']) ?></strong> le <?= $comment['comment_date'] ?></p>
     <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
     <a  onclick="Signal()" href="index.php?action=signaler-commentaire&id=<?=($comment['id'])?>" >Signaler le commentaire</a>
 <?php
 }
+
 ?>
   
 
@@ -48,7 +53,7 @@ while ($comment = $comments->fetch())
     </div>
     <div class="form-group">
       <label>Entrez votre commentaire</label>
-      <textarea class="text" placeholder="Laissez votre commentaire ici." required id="comment" name="comment"></textarea>
+      <textarea class="text" placeholder="Laissez votre commentaire ici." type="text" id="comment" name="comment" required ></textarea>
     </div>
     <div class="form-group">
       <input class="btn btn-primary" onclick="Confirmed()" type="submit" value="Envoyer" />
@@ -58,6 +63,13 @@ while ($comment = $comments->fetch())
 
 </div class="containerCom">
 </section>
+
+<script>
+  function Confirmed() {
+    confirm("Etes vous sur de vouloir poster votre commentaire ?")
+  }
+
+</script
 
 
 <?php $content = ob_get_clean(); ?>

@@ -1,4 +1,4 @@
-<?php $title = " Un billet Pour l'Alaska - Formulaire de contact" ?>
+<?php $title = " Contact" ?>
 <?php $header = "header" ?>
 <?php $headerTop = "header-top" ?>
 <?php ob_start(); ?>

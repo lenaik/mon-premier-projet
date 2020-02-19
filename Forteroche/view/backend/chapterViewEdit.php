@@ -10,7 +10,7 @@
   <div class="template-middle">
     <h1 class="title-page">Modifier le chapitre</h1>
     
-    <a href="../../index.php?action=liste-edition">
+    <a href="index.php?action=administration">
       <div class="goback">
         <i class="far fa-arrow-alt-circle-left"></i>
         <span class="goback-text">Retour</span>

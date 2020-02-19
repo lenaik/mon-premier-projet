@@ -10,11 +10,11 @@ class ChapterManager extends Manager {
     return $req;
   }
   
-  public function getChapter($idchapter) {
+  public function getChapter($chapterId) {
     
     $db = $this->dbConnect();
     $req = $db->prepare('SELECT `id`, `title`, `content`, `created_date` FROM chapters WHERE id = ?');
-    $req->execute(array($idchapter));
+    $req->execute(array($chapterId));
     $chapter = $req->fetch();
     return $chapter;
   }
@@ -25,7 +25,7 @@ class ChapterManager extends Manager {
     $delete = $db->prepare('DELETE FROM chapters WHERE id = ?');
     $delete->execute(array($idChapter));
 
-    header('Location:index.php?action=supprimer-commentaire');
+    header('Location:index.php?action=supprimer-chapitre');
   }
   
   public function editChapter($idChapter, $title, $content) {
@@ -36,6 +36,7 @@ class ChapterManager extends Manager {
 
     header('Location: index.php?action=administration');    
   }
+  
   public function addChapter($title, $content) {
     
     $db = $this->dbConnect();

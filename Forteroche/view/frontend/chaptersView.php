@@ -1,3 +1,5 @@
+<?php $title = "Retrouvez tous les merveilleux chapitres." ?>
+
 <?php ob_start(); ?>
 <h1 class="title-chapters">Tous les chapitres:</h1>
 <div class="content">    
@@ -5,11 +7,14 @@
   <div class="row">
     
     <div class="">
-<?php       
+
+      <?php       
           while ($donnees = $req->fetch())
           {
             $id = $donnees['id'];
-        ?>      
+            
+        ?>  
+            
       <h3 class="title"><a href="index.php?action=chapitre&id=<?= $id ?>"><?= $donnees['title']; ?></a></h3>
         
       <p class="info"><em>Roman</em> | <em><i class="far fa-clock"></i><?= $donnees['created_date']; ?> </em></p>

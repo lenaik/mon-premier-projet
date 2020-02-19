@@ -8,7 +8,7 @@
 <section class="template-middle">
   <h1 class="title-page">Supprimer un chapitre</h1>
   <h2 class="subtitle-page">Veuillez sélectionner le chapitre a supprimer dans la liste.</h2>
-  <a href="index.php?action=moderation">
+  <a href="index.php?action=administration">
     <div class="goback">
       <i class="far fa-arrow-alt-circle-left"></i>
       <span class="goback-text">Retour</span>
@@ -19,10 +19,11 @@
         while ($donnees = $req->fetch())
       {
         $id = $donnees['id'];
+
     ?>
-      <li class="feature">
+      <li class="feature" >
         <?= htmlspecialchars($donnees['title']); ?>
-        <i onclick="Confirmed()" class="fas fa-trash delete-button"></i>
+        <i onclick="Confirmed(<?php echo $id?>)" class="fas fa-trash delete-button"></i>
       </li>
     <?php
       }
@@ -35,10 +36,10 @@
 
 
 <script>
-  function Confirmed() {
+  function Confirmed(id) {
     if(confirm("Etes vous sur de vouloir suppimer le chapitre ?"))
     {
-      window.location.href = "index.php?action=suppression-chapitre&id=<?= $id ?>"
+      window.location.href = "index.php?action=suppression-chapitre&id="+id;
     } else {
       console.log("Suppression annulée")
     }

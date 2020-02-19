@@ -6,9 +6,9 @@
 
 <section class="template-middle">
   <div class="template-middle">
-    <h1 class="title-page">Modifier le chapitre</h1>
+    <h2 class="title-page">Modifier le chapitre</h2>
+    <a href="index.php?action=administration">
     
-    <a href="http://localhost/Forteroche/view/backend/dashBoard.php">
       <div class="goback">
         <i class="far fa-arrow-alt-circle-left"></i>
         <span class="goback-text">Retour</span>

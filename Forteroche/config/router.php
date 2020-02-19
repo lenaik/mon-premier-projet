@@ -44,6 +44,7 @@ class Router {
               }
           }
 
+
           elseif (($_GET['action'] == 'connexion')) {
               if (isset($_POST['user']) && isset($_POST['password'])) {
                   if (!empty($_POST['user']) && !empty($_POST['password'])) {

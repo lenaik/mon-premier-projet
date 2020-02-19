@@ -1,4 +1,4 @@
-<?php $title = " Modification Le roman de Jean Forteroche" ?>
+<?php $title = " Bienvenue sur le blog de Jean Forteroche" ?>
 <?php $header = "header-backend" ?>
 <?php $headerTop = "header-top" ?>
 <?php ob_start(); ?>

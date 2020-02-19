@@ -10,7 +10,7 @@
     Retrouvez les commentaires qui ont été signalés par vos lecteurs.
     Vous pouvez les supprimer ou les ré-habilliter grâces aux boutons mis à disposition.
   </h2>
-  <a href="index.php?action=accueil">
+  <a href="index.php?action=administration">
     <div class="goback">
       <i class="far fa-arrow-alt-circle-left"></i>
       <span class="goback-text">Retour</span>

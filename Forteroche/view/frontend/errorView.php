@@ -1,5 +1,5 @@
 
-<?php $title = " Un billet Pour l'Alaska - Une erreur s'est produite" ?>
+<?php $title = "Une erreur s'est produite" ?>
 <?php $header = "header" ?>
 <?php $headerTop = "header-top" ?>
 <?php ob_start(); ?>

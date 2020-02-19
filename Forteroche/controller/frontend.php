@@ -23,7 +23,7 @@ function chapter() {
   $postManager = new ChapterManager();
   $commentManager = new CommentManager();
   $chapter = $postManager->getChapter($_GET['id']);
-  if(!empty($chapter)) {    
+  if(!empty($chapter)) {
     $comments = $commentManager->getComments($_GET['id']);
     require('view/frontend/chapterView.php');
   } else {
@@ -41,5 +41,6 @@ function addComment($idChapter, $author, $comment) {
     header('Location: index.php?action=chapitre&id=' . $idChapter);
   }
 }
+
 
 

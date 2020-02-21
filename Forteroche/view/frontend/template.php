@@ -33,22 +33,23 @@
   <div class="container">   
     <div class="burger"></div>
       <div class="navbar-header">
-            <a class="navbar-brand" href="index.php?action=accueil">Blog Jean Forteroche</a>
+            <a class="navbar-brand" href="accueil">Blog Jean Forteroche</a>
       </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.php?action=chapitres">Tous les chapitres</a></li>
-            <li><a href="index.php?action=contact">Contact</a></li>
+            <li><a href="chapitres">Tous les chapitres</a></li>
+            <li><a href="contact">Contact</a></li>
           </ul>
           <ul class="nav auth navbar-nav">
-           <ul class="nav navbar-nav navbar-right">                        
-           <?php if (isset($_SESSION['connected'])) { ?>
-              <li><a>Vous êtes connecté</a><li>
-                      <li><a href="index.php?action=administration"> Tableau de bord</a></li>
-                               
+           <ul class="nav navbar-nav navbar-right"> 
+                                 
+            <?php if (isset($_SESSION['connected'])) { ?>
+              <li><a href="administration"></i>Tableau de bord</a></li> 
+              <li><a href="deconnexion"></i>Déconnexion</a></li>                      
             <?php } 
             else { ?>
-                      <li><a href="index.php?action=espace-connexion"></i>Espace Administrateur</a></li>                                        
+              <li><a href="espace-connexion"></i>Espace Administrateur</a></li>
+
             <?php } ?>       
         </ul>
         </div><!--/.nav-collapse -->
@@ -56,7 +57,6 @@
     </nav>
     
     
-        
 <div class="row">
               
     <div class="col-sm-9">
@@ -74,56 +74,6 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"
   ></script>
-  <script>
-$(function() {
-    var i = 0;
-    slideCount = 5;
-    function timeout() {
-      setTimeout(function() {
-        // Move $("#quote" + i) off to the left
-        $("#quote" + i).animate({
-          right: "120%"
-        }, 2000);
-        // Change selected quote
-        i++;
-        if(i > (slideCount - 1)) {
-          i = 0;
-        }
-        // Move $("#quote" + i) to right side then back to middle
-        $("#quote" + i).css("right", "-60%");
-        $("#quote" + i).animate({
-          right: "20%"
-        }, 1500);
-        timeout();
-      }, 3500);
-    };
-    timeout();
-  });
-
-  $('.resume').hide();
-  $('.resume:lt(1)').show();
-
-  let chapters = $('.chapters');
-  for (i=0; i<chapters.length; i++) {
-    if (i % 2 == 0 ) {
-      chapters[i].style.backgroundColor = "#4a4c52"
-    } else {
-      chapters[i].style.backgroundColor = "#dbdfe7"
-    }
-  }
-
-  $('.chapters').click(function(){
-    var id = $(this).attr('id');
-    var all_resume = $('.resume');
-    for (i=0;i<all_resume.length;i++){
-      if (all_resume[i].classList.contains(id)){
-        all_resume[i].style.display = 'flex';
-      } else {
-        all_resume[i].style.display = 'none';
-      }
-    } 
-  });
-
-</script>
+ 
   </body>
 </html>

@@ -4,7 +4,7 @@ require_once("Manager.php");
 
 class CommentManager extends Manager {
 
-  
+
   public function getComments($chapterId) {
     $db = $this->dbConnect();
     $comments = $db->prepare('SELECT `id`, `author`, `comment`, DATE_FORMAT(`comment_date`, "%d/%m/%Y à %Hh%i") AS comment_date FROM comments WHERE post_id = ? ORDER BY comment_date DESC');
@@ -25,21 +25,21 @@ class CommentManager extends Manager {
     $db = $this->dbConnect();
     $delete = $db->prepare('DELETE FROM comments WHERE id = ?');
     $delete->execute(array($commentId));
-    header('Location: index.php?action=moderation');
+    header('Location: moderation');
   }
 
   public function SignalComment($commentId) {
     $db = $this->dbConnect();
     $signal = $db->prepare('UPDATE comments SET signaled = 1  WHERE id = ? ');
     $signal->execute(array($commentId));
-    header('Location: index.php?action=accueil');
+    header('Location: chapitres');
   }
 
   public function unSignalComment($commentId) {
     $db = $this->dbConnect();
     $unsignal = $db->prepare('UPDATE comments SET signaled = 0  WHERE id = ? ');
     $unsignal->execute(array($commentId));
-    header('Location: index.php?action=moderation');
+    header('Location: moderation');
   }
   
   public function postComment($idChapter, $author, $comment) {

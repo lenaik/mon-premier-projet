@@ -1,8 +1,6 @@
 <?php $title = " Bienvenue sur le blog de Jean Forteroche" ?>
 <?php $header = "header-backend" ?>
 <?php $headerTop = "header-top" ?>
-<?php ob_start(); ?>
-
 
  <div class="containerBio">
   
@@ -35,7 +33,7 @@
   </div>
 </div>
     </div> <!-- /container -->
-  
+ 
 </section>
 
 

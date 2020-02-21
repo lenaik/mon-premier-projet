@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteRule ^contact$ index.php?action=contact
+RewriteRule ^chapitres$ index.php?action=chapitres
+RewriteRule ^administration$ index.php?action=administration
+RewriteRule ^accueil$ index.php
+RewriteRule ^nouveau-chapitre$ index.php?action=nouveau-chapitre
+RewriteRule ^liste-edition$ index.php?action=liste-edition
+RewriteRule ^supprimer-chapitre$ index.php?action=supprimer-chapitre
+RewriteRule ^moderation$ index.php?action=moderation
+RewriteRule ^rappel$ index.php?action=rappel
+RewriteRule ^espace-connexion$ index.php?action=espace-connexion
+RewriteRule ^login$ index.php?action=login
+RewriteRule ^deconnexion$ index.php?action=deconnexion
+
+Options -Indexes

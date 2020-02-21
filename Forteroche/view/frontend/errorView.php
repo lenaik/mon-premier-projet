@@ -1,7 +1,6 @@
 
 <?php $title = "Une erreur s'est produite" ?>
-<?php $header = "header" ?>
-<?php $headerTop = "header-top" ?>
+
 <?php ob_start(); ?>
 
 

@@ -4,9 +4,11 @@ require_once("Manager.php");
 
 class AdminManager extends Manager {
 
+
   public function login($user) {
 
-if(!empty($_POST) && !empty($_POST['user']) && !empty($_POST['password'])){
+
+    if(!empty($_POST) && !empty($_POST['user']) && !empty($_POST['password'])){
 
     $db = $this->dbConnect();
 
@@ -16,10 +18,11 @@ if(!empty($_POST) && !empty($_POST['user']) && !empty($_POST['password'])){
     
     
     if (isset($_POST['user']) AND $_POST['user']){
-		// Comparaison du pass envoyé via le formulaire avec la base
-		$isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
-		
-		    if ($isPasswordCorrect) {
-		      return $resultat;
+	// Comparaison du pass envoyé via le formulaire avec la base
+	$isPasswordCorrect = password_verify($_POST['password'], $resultat['password']);
+	if ($isPasswordCorrect) {  
+    session_start(); 
+	return $resultat;
 }
+
 }}}}

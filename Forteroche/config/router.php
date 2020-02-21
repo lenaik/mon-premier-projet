@@ -2,11 +2,17 @@
 
 class Router { 
 
+static function url() {
+
+    echo 'http://localhost/Forteroche/accueil';
+  }
+
   public function init() {
     try {  
       if (isset($_GET['action'])) {
           if ($_GET['action'] == 'accueil') {
           accueil();
+
           }
 
           elseif ($_GET['action'] == 'chapitres') {
@@ -51,6 +57,7 @@ class Router {
                       loggin($_POST['user'], $_POST['password']);
                       
                   }
+
                   else {
                       throw new Exception('Tous les champs ne sont pas remplis !');
                   }
@@ -63,9 +70,11 @@ class Router {
           elseif (($_GET['action'] == 'administration')) {
               if (isset($_SESSION['utilisateur'])) {
                 displayDashboard();
-              } else {
+              } 
+
+              else {
                   echo "Mot de passe ou Nom d'utilisateur Incorrect. Veuillez retaper correctement votre nom d'utilisateur ou votre mot de passe. Pour tout probleme rencontre, veuillez contacter : Anjou Web Creation au 06/06/07/04/05.";
-              }
+              }           
           }
           
           elseif(($_GET['action'] == 'login')){
@@ -74,12 +83,12 @@ class Router {
 
 
 
-          elseif (($_GET['action'] == 'deconnexion')) {
-              if (isset($_SESSION['connected'])) {
+          elseif (($_GET['action'] == 'deconnexion')) {              
+                  if (isset($_SESSION['connected'])) {                 
                   session_destroy();
-                  header('Location:index.php?action=accueil');
-              }
-          }
+                  header('Location: accueil');
+              }}
+
 
           elseif (($_GET['action'] == 'espace-connexion')) {
               displayLogin();
@@ -92,14 +101,14 @@ class Router {
           elseif (($_GET['action'] == 'ajout-chapitre')) {
               if (!empty($_POST['title']) && !empty($_POST['content'])) {
               createChapter($_POST['title'], $_POST['content']);
-              } else {
-                  throw new Exception('Aucun titre et/ou contenu');
-              }
+              } 
+              
           }
 
 
           elseif (($_GET['action'] == 'supprimer-chapitre')) {
               displayDelete();
+               
           }
 
           elseif ($_GET['action'] == 'suppression-chapitre') {
@@ -109,10 +118,12 @@ class Router {
               else {
                   throw new Exception('Aucun identifiant de billet envoyé');
               }
+               
           }
 
           elseif (($_GET['action'] == 'liste-edition')) {
               displayEdit();
+              
           }
 
           elseif ($_GET['action'] == 'editer-chapitre') {
@@ -122,6 +133,7 @@ class Router {
               else {
                   throw new Exception('Aucun identifiant de billet envoyé');
               }
+              
           }
 
         
@@ -141,7 +153,8 @@ class Router {
 
           elseif (($_GET['action'] == 'moderation')) {
               displayModerate();
-          }
+          } 
+          
 
           
 
@@ -152,6 +165,7 @@ class Router {
               else {
                   throw new Exception('Aucun identifiant de billet envoyé');
               }
+              
           }
 
           elseif ($_GET['action'] == 'annuler-moderation') {
@@ -161,6 +175,7 @@ class Router {
               else {
                   throw new Exception('Aucun commentaire de billet envoyé');
               }
+              
           }
           
           elseif ($_GET['action'] == 'signaler-commentaire') {
@@ -175,6 +190,7 @@ class Router {
       else {
           accueil();
       }
+       
     }
     catch(Exception $e) { // S'il y a eu une erreur, alors...
       $errorMessage = $e->getMessage();

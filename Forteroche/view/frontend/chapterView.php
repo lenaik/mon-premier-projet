@@ -4,7 +4,7 @@
 <?php ob_start(); ?>
 <section class="template-big">
 
-  <a href="index.php?action=chapitres">
+  <a href="chapitres">
       <div class="goback">
         <i class="far fa-arrow-alt-circle-left"></i>
         <span class="goback-text">Retour</span>

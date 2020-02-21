@@ -5,7 +5,7 @@
     <title>Maintenance</title>
   </head>
   <body>
-    <a href="index.php?action=administration">
+    <a href="administration">
     <div class="goback">
       <i class="far fa-arrow-alt-circle-left"></i>
       <span class="goback-text">Retour</span>

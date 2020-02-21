@@ -1,6 +1,4 @@
 <?php $title = " Jean Forteroche - Espace de connexion" ?>
-<?php $header = "header-backend" ?>
-<?php $headerTop = "header-top" ?>
 <?php ob_start(); ?>
 
 
@@ -9,10 +7,10 @@
    <h2 class="subtitle-page">Veuillez vous connecter pour accéder à votre espace d'administration.</h2>
 
 <h3 class="subtitle-page">Si vous n'êtes l'administrateur du site, veuillez quitter cette page. MERCI</h3>
-  <form class="login-form" action="index.php?action=login" method="post">
+  <form class="login-form" action="login" method="post">
     <div class="login-form-top">
       <div class="form-field">
-          <input type="text" id="user" class="input-text" name="user" placeholder="Nom d'utilisateur" required/>
+          <input type="password" id="user" class="input-text" name="user" placeholder="Nom d'utilisateur" required/>
       </div>
       <div class="form-field">
           <input type="password" id="password" name="password" class="input-text" placeholder="Mot de passe" required />

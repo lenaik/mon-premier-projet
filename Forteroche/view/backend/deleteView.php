@@ -1,14 +1,14 @@
-
 <?php $title = " Jean Forteroche - Supprimer un chapitre" ?>
-<?php $header = "header-backend" ?>
-<?php $headerTop = "header-top" ?>
+<?php
+require "verif_session.php";
+?>
 <?php ob_start(); ?>
 
 
 <section class="template-middle">
   <h1 class="title-page">Supprimer un chapitre</h1>
   <h2 class="subtitle-page">Veuillez sélectionner le chapitre a supprimer dans la liste.</h2>
-  <a href="index.php?action=administration">
+  <a href="administration">
     <div class="goback">
       <i class="far fa-arrow-alt-circle-left"></i>
       <span class="goback-text">Retour</span>

@@ -1,6 +1,7 @@
 <?php $title = " Jean Forteroche - Éditer un chapitre" ?>
-<?php $header = "header-backend" ?>
-<?php $headerTop = "header-top" ?>
+<?php
+require "verif_session.php";
+?>
 <?php ob_start(); ?>
 
         
@@ -10,7 +11,7 @@
   <div class="template-middle">
     <h1 class="title-page">Modifier le chapitre</h1>
     
-    <a href="index.php?action=administration">
+    <a href="administration">
       <div class="goback">
         <i class="far fa-arrow-alt-circle-left"></i>
         <span class="goback-text">Retour</span>

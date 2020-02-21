@@ -12,7 +12,7 @@ function login($user, $password) {
   }
   else {
     $_SESSION['utilisateur'] =  $dataUser['id'];
-    header('Location:index.php?action=administration');
+    header('Location:administration');
   }
 }
 

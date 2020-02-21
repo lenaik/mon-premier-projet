@@ -1,6 +1,7 @@
 <?php $title = " Jean Forteroche - Modération commentaire" ?>
-<?php $header = "header-backend" ?>
-<?php $headerTop = "header-top" ?>
+<?php
+require "verif_session.php";
+?>
 <?php ob_start(); ?>
 
 
@@ -10,7 +11,7 @@
     Retrouvez les commentaires qui ont été signalés par vos lecteurs.
     Vous pouvez les supprimer ou les ré-habilliter grâces aux boutons mis à disposition.
   </h2>
-  <a href="index.php?action=administration">
+  <a href="administration">
     <div class="goback">
       <i class="far fa-arrow-alt-circle-left"></i>
       <span class="goback-text">Retour</span>

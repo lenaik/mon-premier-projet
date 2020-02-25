@@ -26,7 +26,7 @@ h3 {
 }
 
 a {
-    color: #78ab4e;
+    color: #729CB8;
     transition: .3s;
     transition-duration: .3s;
 }
@@ -49,9 +49,27 @@ a:hover, a:focus {
 /*------------- Header -----------------*/
 
 header img {
+
     width: 100%;
-    height: 590px;
+    height: 650px;
     box-shadow: 2px 2px 5px #515c53;
+}
+
+.fa-bookmark{
+    margin-left: 650px;
+}
+
+.fa-box{
+color:red;
+}
+
+.Axel{
+text-align: center;
+width: 134%;
+}
+
+.fa-feather{
+    margin-left: 580px;
 }
 
 .intro {
@@ -189,6 +207,11 @@ h1.title {
     line-height: 1.2;
     margin-bottom: 1rem;
     border-bottom: .75px solid #e3e3e3;
+    color:#7090A0;
+}
+
+.goback{
+    margin-left: 10px;
 }
 
 .title a,
@@ -211,11 +234,13 @@ h1.title {
 }
 
 .item {
-    text-align: justify;  
+    text-align: justify; 
+    color: #53564F; 
 }
 
 .title-chapter{
-    transform: translate(209px,0px);
+    text-align: center;
+    color: #729CB8;
 }
 
 .title-chapters{
@@ -313,6 +338,9 @@ fieldset{
 }
 
 /*------------- CSS Admin -----------------*/
+#iconMenu{
+   margin-right: 10px;
+}
 
 #adminmenu {
     background-color: #404852;
@@ -543,13 +571,13 @@ tr>td a {
 }
 
 .title-bio{
-transform: translate(-45px, -20px);
 
+color: #7090A0;
 }
 
 .paraBio{
   transform: translate(64px, -265px);
-
+  color: #53564F;
 }
 .essai{
     background-color:#2D3D29;
@@ -559,13 +587,13 @@ transform: translate(-45px, -20px);
 }
 
 .containerBio{
-transform: translate(50px, 60px);
+transform: translate(100px, 60px);
 }
 
 .bio {
     font-size: 1.15em;
     width: 76%;
-    transform: translate(325px, 35px);
+    transform: translate(317px, 35px);
     text-align: justify;
 }
 

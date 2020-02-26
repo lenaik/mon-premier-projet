@@ -9,7 +9,7 @@
               <h2 class="subtitle-page">Veuillez vous connecter pour accéder à votre espace d'administration.</h2>
                   <h3 class="subtitle-page">Si vous n'êtes l'administrateur du site, veuillez quitter cette page. MERCI</h3>
 
-                    <form class="login-form" action="login" method="post">
+                    <form class="login-form" action="login" method="post" autocomplete="off" >
 
                         <div class="login-form-top">
 
@@ -32,5 +32,5 @@
 
 
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php require('view/backend/template.php'); ?>
 

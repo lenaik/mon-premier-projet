@@ -1,5 +1,9 @@
 <?php $title = "Retrouvez tous les merveilleux chapitres." ?>
+<?php
 
+session_unset();
+session_destroy();
+?>
 <?php ob_start(); ?>
 <h1 class="title-chapters">Tous les chapitres:</h1>
     <div class="content">    
@@ -31,6 +35,6 @@
     </div>      
 
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php require('view/frontend/template.php'); ?>
 
 

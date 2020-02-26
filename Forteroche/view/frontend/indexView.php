@@ -1,8 +1,9 @@
-<?php $title = " Bienvenue sur le blog de Jean Forteroche" ?>
-<?php $header = "header-backend" ?>
-<?php $headerTop = "header-top" ?>
+<?php $title = " Bienvenue sur le blog littéraire de Jean Forteroche." ?>
+<?php
 
-
+session_unset();
+session_destroy();
+?>
 <section>
         <div class="containerBio">
 <i class="fas fa-feather fa-3x"></i>
@@ -48,4 +49,4 @@
 
 
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php require('view/frontend/template.php'); ?>

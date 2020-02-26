@@ -1,6 +1,9 @@
 <?php $title = " Contact"; ?>
-<?php $header = "header" ?>
-<?php $headerTop = "header-top" ?>
+<?php
+
+session_unset();
+session_destroy();
+?>
 <?php ob_start(); ?>
 <div class='Axel'>
 <h1>Me contacter</h1>
@@ -9,5 +12,5 @@
 		<a href="mailto:contact@Forteroche.fr">Me contacter par mail.</a>
 </div>	
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php require('view/frontend/template.php'); ?>
 

@@ -1,6 +1,9 @@
-
 <?php $title = "Une erreur s'est produite" ?>
+<?php
 
+session_unset();
+session_destroy();
+?>
 <?php ob_start(); ?>
 
 

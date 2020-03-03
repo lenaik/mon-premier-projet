@@ -2,10 +2,6 @@
 
 class Router { 
 
- static function url() {
-
-    echo 'http://localhost:8888/Forteroche/';
-  }
 
   public function init() {
     try {  

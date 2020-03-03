@@ -1,19 +1,22 @@
 <?php $title = " Bienvenue sur le blog littéraire de Jean Forteroche." ?>
+<?php $header = "header" ?>
+<?php $headerTop = "header-top" ?>
 <?php
-
 session_unset();
 session_destroy();
 ?>
+
+<?php ob_start(); ?>
 <section>
         <div class="containerBio">
-<i class="fas fa-feather fa-3x"></i>
+          <i class="fas fa-feather fa-3x"></i>
             <div class="bio">
                               
                 <h2 class="title-bio">Présentation de l'illustre Jean Forteroche.</h2>
 
-                        <div class="sign">
-                            <img src="http://localhost/Forteroche/public/images/jean.jpg" class="thumbnail cover" alt="Jean" />
-                        </div>
+                      
+                            <img src="public/images/jean.jpg" class="thumbnail cover" alt="Jean" />
+                        
 
                         <p class="paraBio">
                           Jean Forteroche est né le 4 mai 1964 à Ortona (province de Chieti, dans les Abruzzes), est un écrivain. Il naît dans un petit village italien, Ortona, marqué par une enfance catholique, devenant même enfant de chœur, sa mère l'imagine avec une carrière de curé. À saisir ans, il s'engage dans la Marine italienne. Il la quitte en 1982. Deux ans plus tard, en 1984, il rencontre Gabriel Pontello, célèbre écrivain et qu'il lui donne le goût de l'écriture.
@@ -22,16 +25,15 @@ session_destroy();
               </div> 
 
           </div>
-<i class="fas fa-bookmark fa-3x"></i>
+                <i class="fas fa-bookmark fa-3x"></i>
+                
           <div class="content">
-              
-                <h1 class="title-chapter">Extrait d'un chapitre à succès :</h1>
-               
-                        <div class="row">
-                           
+
+              <div class="row">
+                  <h1 class="title-chapter">Extrait d'un chapitre à succès :</h1>      
                           <div class="">
                               
-                            <h2 class="title-chapter"><a href="index.php?action=chapitre&id=58">La singulière tristesse du gâteau au citron</a></h2>
+                            <h2 class=""><a href="index.php?action=chapitre&id=58">La singulière tristesse du gâteau au citron</a></h2>
 
                             <p class="info"><em>Roman</em> | <em><i class="far fa-clock"></i>25 Février 2020 </em></p>
 

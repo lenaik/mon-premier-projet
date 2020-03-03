@@ -29,7 +29,7 @@ require "verif_session.php";
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.tiny.cloud/1/3y0o4z3btq0eswxcaiemnc9mp1rnzmew17ps4dg475gvkdzf/tinymce/5/tinymce.min.js"></script>
+<script type="text/javascript" src="https://cdn.tiny.cloud/1/r2r72l74grxy2k5mc796g3assni76fmzuauxwwee4p48znti/tinymce/5/tinymce.min.js"></script>
 <script>
   tinymce.init({
     themes: "advanced",

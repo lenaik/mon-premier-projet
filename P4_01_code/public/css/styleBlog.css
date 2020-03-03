@@ -10,6 +10,10 @@ html, body {
     width: 100%;
 }
 
+.titleAccueil{
+    margin-top: -309px;
+    color: white;
+}
 
 body {
     color: #404852;
@@ -65,7 +69,7 @@ color:red;
 
 .Axel{
 text-align: center;
-width: 134%;
+width: 114%;
 }
 
 .fa-feather{
@@ -239,8 +243,7 @@ h1.title {
 }
 
 .title-chapter{
-    text-align: center;
-    color: #729CB8;
+    text-align: center;    
 }
 
 .title-chapters{
@@ -252,11 +255,9 @@ h1.title {
 }
 
 .cover {
-    width: 106%;
-    margin-top: 20px;
-    width: 130%;
-    height: 280px;
-    transform: translate(-45px, 20px);
+    width: 30%;
+    height: 160px;
+    transform: translate(-256px, 32px);
 }
 
 .principal {
@@ -565,8 +566,8 @@ tr>td a {
 }
 
 .sign img {
-    width: 41%;
-    height: 280px;
+    width: 37%;
+    height: 247px;
     transform: translate(-282px, 20px);  
 }
 
@@ -576,14 +577,18 @@ color: #7090A0;
 }
 
 .paraBio{
-  transform: translate(64px, -265px);
+  transform: translate(183px, -148px);
   color: #53564F;
+  width: 75%;
 }
+
 .essai{
     background-color:#2D3D29;
 }
+
 .row{
     text-align: center;
+    width: 88%;
 }
 
 .containerBio{

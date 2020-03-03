@@ -1,4 +1,5 @@
 RewriteEngine on
+
 RewriteRule ^contact$ index.php?action=contact
 RewriteRule ^chapitres$ index.php?action=chapitres
 RewriteRule ^administration$ index.php?action=administration

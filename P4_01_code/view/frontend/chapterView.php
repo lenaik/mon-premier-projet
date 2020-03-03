@@ -1,5 +1,6 @@
 <?php $title = "Sur cette page, vous pouvez lire votre chapitre et laisser des commentaires." ?>
-
+<?php $header = "header" ?>
+<?php $headerTop = "header-top" ?>
 <?php ob_start(); ?>
 <section class="template-big">
 

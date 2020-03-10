@@ -5,27 +5,32 @@ require "verif_session.php";
 <?php ob_start(); ?>
 
 
-<section class="template-middle">
-  <h1 class="title-page">Rédiger un nouveau chapitre</h1>
-  <h2 class="subtitle-page">Veuillez utiliser l'éditeur mis à votre disposition.</h2>
-  <a href="administration">
-    <div class="goback">
-      <i class="far fa-arrow-alt-circle-left"></i>
-      <span class="goback-text">Retour</span>
-    </div>
-  </a>
-  <form class="backend-form" action="index.php?action=ajout-chapitre" method="post">
-    <div class="form-field-title">
-      <input name="title" class="input-text" placeholder="Veuillez écrire votre titre ici "value=""/>
-    </div>
-    <div class="form-field">
-      <textarea class="tiny-area" placeholder="Veuillez écrire votre contenu" name="content"></textarea>
-    </div>
-    <div class="form-field">
-      <input class="submit-btn"  onclick="Confirmed()" type="submit" value="Envoyer">
-    </div>
-  </form>
-</section>
+<session class="template-middle">
+        <h1 class="title-page">Rédiger un nouveau chapitre</h1>
+          <h2 class="subtitle-page">Veuillez utiliser l'éditeur mis à votre disposition.</h2>
+                  <a href="administration">
+                    <div class="goback">
+                      <i class="far fa-arrow-alt-circle-left"></i>
+                      <span class="goback-text">Retour</span>
+                    </div>
+                  </a>
+
+                <form class="backend-form" action="index.php?action=ajout-chapitre" method="post">
+
+                              <div class="form-field-title">
+                                <input name="title" class="input-text" placeholder="Veuillez écrire votre titre ici "value=""/>
+                              </div>
+
+                              <div class="form-field">
+                                <textarea class="tiny-area" placeholder="Veuillez écrire votre contenu" name="content"></textarea>
+                              </div>
+
+                              <div class="form-field">
+                                <input class="submit-btn"  onclick="Confirmed()" type="submit" value="Envoyer">
+                              </div>
+                  
+                </form>
+</session>
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -52,6 +57,7 @@ require "verif_session.php";
     entity_encoding : "raw",
   });
 </script>
+
 <script>
   function Confirmed() {
     confirm("Etes vous sur de vouloir ajouter ce chapitre ?")

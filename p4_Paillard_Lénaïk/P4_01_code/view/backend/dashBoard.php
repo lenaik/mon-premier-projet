@@ -2,7 +2,7 @@
 <?php $title = " Jean Forteroche - Connexion espace d'administration" ?>
 <?php ob_start(); ?>
 
-<section class="template-middle">
+<session class="template-middle">
   
   <h1 class="title-page">Espace d'administration</h1>
   <h2 class="subtitle-page">Retrouvez toutes les fonctionnalités afin de gérer votre site.</h2>
@@ -16,7 +16,7 @@
     <li class="feature"><a href="supprimer-chapitre">Supprimer un chapitre</a></li>  <li class="feature"><a href="moderation">Modération</a></li>
     <li class="feature"><a href="rappel">Rappel</a></li>
   </ul>
-</section>
+</session>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('view/backend/template.php'); ?>

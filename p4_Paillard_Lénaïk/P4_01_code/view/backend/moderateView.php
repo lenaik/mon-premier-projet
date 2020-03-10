@@ -5,49 +5,62 @@ require "verif_session.php";
 <?php ob_start(); ?>
 
 
-<section class="template-middle">
+<session class="template-middle">
+
+
   <h1 class="title-page">Votre espace modération</h1>
   <h2 class="subtitle-page">
     Retrouvez les commentaires qui ont été signalés par vos lecteurs.
     Vous pouvez les supprimer ou les ré-habilliter grâces aux boutons mis à disposition.
   </h2>
+
   <a href="administration">
+
     <div class="goback">
       <i class="far fa-arrow-alt-circle-left"></i>
       <span class="goback-text">Retour</span>
     </div>
   </a>
 
+
   <?php 
     if (!empty($comments)) {
   ?>
+
     <ul>  
-      <?php
-       for ($i=0; $i < count($comments); $i++)
-       {
-      ?>
-        <li class="feature-column">
-          <p><strong><?= htmlspecialchars($comments[$i]['author']) ?></strong> le <?= $comments[$i]['comment_date'] ?></p>
-          <p><?= nl2br(htmlspecialchars($comments[$i]['comment'])) ?></p>
-          <div class="two-choose">
-            <button onclick="Delete(<?= $comments[$i]['id'] ?>)">Supprimer</button>
-            <button onclick="Cancel(<?= $comments[$i]['id']?>)">Ré-intégrer</button>
-          </div>
-        </li>
-      <?php
-        }
-      ?>
+                <?php
+                 for ($i=0; $i < count($comments); $i++)
+                 {
+                ?>
+                  <li class="feature-column">
+                    <p><strong><?= htmlspecialchars($comments[$i]['author']) ?></strong> le <?= $comments[$i]['comment_date'] ?></p>
+                    <p><?= nl2br(htmlspecialchars($comments[$i]['comment'])) ?></p>
+
+                    <div class="two-choose">
+                      <button onclick="Delete(<?= $comments[$i]['id'] ?>)">Supprimer</button>
+                      <button onclick="Cancel(<?= $comments[$i]['id']?>)">Ré-intégrer</button>
+                    </div>
+                  </li>
+                  
+                <?php
+                  }
+                ?>
     </ul>
+
   <?php
     } else {
   ?>
+
     <h3 class="subtitle-page">
       Il n'y a actuellement pas de commentaire à modérer.
     </h3>
+    
   <?php
     }
   ?>
-</section>
+
+
+</session>
 
 
 <script>

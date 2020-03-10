@@ -10,9 +10,9 @@ session_destroy();
 <h1 class="title-chapters">Tous les chapitres:</h1>
     <div class="content">    
 
-        <div class="row">
+        <div class="indexChapters">
             
-            <div class="">
+            
 
                     <?php       
                         while ($donnees = $req->fetch())
@@ -21,16 +21,17 @@ session_destroy();
                           
                       ?>  
                           
-                    <h3 class="title"><a href="index.php?action=chapitre&id=<?= $id ?>"><?= $donnees['title']; ?></a></h3>
+                    <h1 class="title"><a href="index.php?action=chapitre&id=<?= $id ?>"><?= $donnees['title']; ?></a></h1>
                       
                     <p class="info"><em>Roman</em> | <em><i class="far fa-clock"></i><?= $donnees['created_date']; ?> </em></p>
-                    <div class="item"><p style="text-align: justify;"><?= substr(html_entity_decode($donnees['content']), 0,200); ?>......</p></div>  
+                    <div class="extrait"><p style="text-align: justify;"><?= substr(html_entity_decode($donnees['content']), 0,200); ?>......</p>
+                    </div>  
                     <i class="fas fa-box"></i> 
                         <?php
                         }
                         ?>
                       
-            </div>
+           
             
         </div>
                

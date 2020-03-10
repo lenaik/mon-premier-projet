@@ -2,7 +2,7 @@
 <?php ob_start(); ?>
 
 
-<section class="login-page">
+<session class="login-page">
   
          <h1 class="title-page">Espace d'administration</h1>
 
@@ -28,7 +28,7 @@
                         </div>
 
                     </form>
-</section>
+</session>
 
 
 <?php $content = ob_get_clean(); ?>

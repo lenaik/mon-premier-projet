@@ -7,10 +7,10 @@ session_destroy();
 <?php ob_start(); ?>
 
 
-<section class="template-short">
+<session class="template-short">
   <h1 class="title-page">Page d'erreur</h1>
   <p>Une erreur s'est produite. Merci de retourner à l'accueil.</p>
-</section>
+</session>
 
 
 <?php $content = ob_get_clean(); ?>
